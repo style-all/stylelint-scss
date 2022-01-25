@@ -1,0 +1,40 @@
+{
+    "author": "Team @style-all",
+    "bugs": {
+        "url": "https://github.com/style-all/stylelint-scss/issues"
+    },
+    "dependencies": {
+        "postcss-scss": "latest",
+        "stylelint": "latest",
+        "stylelint-scss": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "latest",
+        "typescript": "latest"
+    },
+    "files": [
+        "dist/index.js"
+    ],
+    "homepage": "https://github.com/style-all/stylelint-scss#readme",
+    "keywords": [
+        "css",
+        "lint",
+        "scss",
+        "style",
+        "stylelint"
+    ],
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "@style-all/stylelint-scss",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/style-all/stylelint-scss.git"
+    },
+    "scripts": {
+        "deploy": "tsc && npm publish"
+    },
+    "version": "0.0.2"
+}
