@@ -6,7 +6,7 @@
     $ npm install @style-all/stylelint-scss -D
     ```
 
-* create a `.stylelintrc.json` file in your project folder with content  
+* create a `.stylelintrc.json` file in your project folder with content
     ```json
     {
         "extends": [
