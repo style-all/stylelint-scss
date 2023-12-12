@@ -6,8 +6,8 @@
     "dependencies": {
         "postcss-scss": "latest",
         "stylelint": "latest",
-        "stylelint-scss": "latest",
-        "stylelint-stylistic": "latest"
+        "stylelint-codeguide": "latest",
+        "stylelint-scss": "latest"
     },
     "devDependencies": {
         "@types/node": "latest",
@@ -37,5 +37,5 @@
     "scripts": {
         "deploy": "tsc && npm publish"
     },
-    "version": "0.1.1"
+    "version": "0.2.0"
 }
