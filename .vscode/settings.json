@@ -1,0 +1,9 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/traefik-v2-file-provider.json": "traefik-file-provider.yml",
+        "https://json.schemastore.org/github-workflow.json": [
+            "file:///d%3A/Repos/GitHub/%40style-all/stylelint-scss/.github/workflow/autopublish.yml",
+            "file:///d%3A/Repos/GitHub/%40style-all/stylelint-scss/.github/workflows/autopublish.yml"
+        ]
+    }
+}
