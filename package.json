@@ -11,6 +11,9 @@
     },
     "devDependencies": {
         "@types/node": "latest",
+        "@types/semver": "latest",
+        "semver": "latest",
+        "ts-node": "latest",
         "typescript": "latest"
     },
     "files": [
@@ -28,14 +31,16 @@
     "main": "dist/index.js",
     "name": "@style-all/stylelint-scss",
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "tag": "latest"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/style-all/stylelint-scss.git"
     },
     "scripts": {
+        "amend": "npx ts-node --skipProject ./.github/workflows/amend.ts",
         "deploy": "tsc && npm publish"
     },
-    "version": "0.2.1"
+    "version": "0.0.0"
 }
