@@ -1,7 +1,9 @@
-import { clean } from 'semver';
-import * as fs from 'node:fs'
+import * as fs from 'node:fs';
+import { clean, valid } from 'semver';
 
 console.log('starting amend package version...');
+
+console.log(valid('release(v1.2.3): asdfsdf'));
 
 let packageObj: { version: string, publishConfig: { tag: string } } | undefined;
 
@@ -24,6 +26,19 @@ if (packageObj.version != '0.0.0') {
     process.exit();
 }
 
+const refType: string | undefined = process.env['GITHUB_REF_TYPE'];
+console.log('reading env variable "GITHUB_REF_TYPE":', refType);
+
+if (typeof refType != 'string') {
+    console.error('env variable "GITHUB_REF_TYPE" not found');
+    process.exit(1);
+}
+
+if (refType != 'tag') {
+    console.error('exiting since "GITHUB_REF_TYPE" is not "tag"');
+    process.exit();
+}
+
 const refName: string | undefined = process.env['GITHUB_REF_NAME'];
 console.log('reading env variable "GITHUB_REF_NAME":', refName);
 
@@ -43,7 +58,7 @@ console.log('reading env variable "GITHUB_IS_PRERELEASE":', isRelease);
 
 if (typeof isRelease != 'string' || !isRelease) {
     console.error('env variable "GITHUB_IS_PRERELEASE" not found or is empty');
-    process.exit(1);
+    process.exit(0);
 }
 
 console.log(`setting package version to "${version}"`);
