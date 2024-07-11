@@ -1,11 +1,6 @@
 name: Publish to npm on a release
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - src/**
   release:
     types:
       - published
