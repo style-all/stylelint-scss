@@ -3,8 +3,6 @@ import { clean, valid } from 'semver';
 
 console.log('starting amend package version...');
 
-console.log(valid('release(v1.2.3): asdfsdf'));
-
 let packageObj: { version: string, publishConfig: { tag: string } } | undefined;
 
 try {
