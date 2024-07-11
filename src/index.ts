@@ -66,7 +66,7 @@ export = {
         'scss/function-quote-no-quoted-strings-inside': true,
         'scss/function-unquote-no-unquoted-strings-inside': true,
         'scss/load-no-partial-leading-underscore': true,
-        'scss/load-partial-extension': 'always',
+        'scss/load-partial-extension': 'never',
         'scss/no-duplicate-mixins': true,
         'scss/no-global-function-names': true,
         'scss/operator-no-newline-after': true,
